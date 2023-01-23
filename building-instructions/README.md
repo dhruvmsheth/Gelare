@@ -1,21 +1,27 @@
 <h2> Building Instructions </h2>
+This repository contains information for running Gelāre on LEGO Mindstorms Robot Inventor Kit 51515. We haven't tested our software for LEGO EV3 yet. If you do find a method to convert LEGO EV3 pin to an LPF2 pin, this system might be usable with little or no modifications on EV3 as well. The Hardware build process for Robot inventor kit is listed [here](https://github.com/dhruvsheth-ai/Gelare/blob/main/building-instructions/InventorInstructions.md) and for EV3, is listed [here](https://github.com/dhruvsheth-ai/Gelare/blob/main/building-instructions/ev3Instructions.md)
 
-<h3>Required Parts:</h3>
+![label-gelare](https://user-images.githubusercontent.com/67831664/214117797-92c30701-a97f-46bf-93a7-9d1451e2542c.jpg)
 
-![Lego Digital Designer parts list-1](https://user-images.githubusercontent.com/67831664/205896079-321d18d7-a21e-43db-a5ee-c14a31a19e5c.jpg)
-![Lego Digital Designer parts list-2](https://user-images.githubusercontent.com/67831664/205896091-f3d74e4a-776e-40b2-b2b5-9b7be0cbf508.jpg)
+<h2> LEGO Inventor Kit Setup </h2>
+Instructions to setup LEGO Robot Inventor Kit can be found [here]()
 
-<h3> Lego Digital Designer Build </h3>
+<h2> Build Hat </h2>
+Instructions to configure and setup Build Hat: 
 
-![image](https://user-images.githubusercontent.com/67831664/205881859-cf3a4ae7-e741-4dfa-84e7-6723a705df12.png)
-![image](https://user-images.githubusercontent.com/67831664/205883035-aa3a86f4-70ac-4e31-b6da-7f63f9dd77f0.png)
-![image](https://user-images.githubusercontent.com/67831664/205883123-72ed251f-6692-4191-b5e4-3307e4936fc8.png)
-![image](https://user-images.githubusercontent.com/67831664/205883194-f2f0d1d1-b4d7-445d-953f-7d7015eb3c62.png)
-![image](https://user-images.githubusercontent.com/67831664/205883274-10bc1d1f-87e6-4937-b3d0-b2e149d34590.png)
-![image](https://user-images.githubusercontent.com/67831664/205881675-5b02ff27-17b2-411c-b824-78ccc7a45bc7.png)
 
-<h3> Gripper Model </h3>
+<h2> OAK-D Deployment </h2>
 
-![image](https://user-images.githubusercontent.com/67831664/205882869-3604543d-e57d-4c5c-90c4-26895f6904fc.png)
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/67831664/214127230-46c83ec8-647d-4512-b5ef-9a3d6d6756e4.png" width="250" />
+  <img src="https://user-images.githubusercontent.com/67831664/214128016-856327c5-c5e0-4716-88bf-d427d01f3012.png" width="450" /> 
+  <img src="(https://user-images.githubusercontent.com/67831664/214128019-d55ebf70-650f-4d1b-ade5-4bdc20774aad.png" width="400" /> 
+</p>
 
+
+
+
+OAK-D is a device to inference Monocular Neural Inference fused with stereo depth and Staereo Neural Inference.
+DepthAI is the embedded spatial AI platform built around Myriad X - a complete ecosystem of custom hardware, firmware, software, and AI training. It combines neural inference, depth vision, and feature tracking into an easy-to-use, works-in-30-seconds solution.
+DepthAI offloads AI, depth vision and more - processed direct from built-in cameras - freeing your host to process application-specific data.
 
