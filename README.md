@@ -39,6 +39,7 @@ This is the simplest approach to deploy EdgeImpulse models on Raspberry Pi and g
 
 <h2> Installation </h2>
 <h3> Installation for OAK-D </h3>
+
 ```shell
 $ sudo curl -fL https://docs.luxonis.com/install_dependencies.sh | bash
 ```
@@ -48,8 +49,18 @@ $ cd Gelare
 $ pip3 install -r requirements.txt
 ```
 
-<h3> Installation for running EdgeImpulse on Raspberry Pi:
-  
+<h3> Installation for running EdgeImpulse on Raspberry Pi: </h3>
+
+```shell
+$ sudo apt update
+$ sudo apt upgrade
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+$ sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
+$ npm config set user root && sudo npm install edge-impulse-linux -g --unsafe-perm
+```  
+Setup the camera module through `sudo raspi-config`. Not required for a webcame. This documentation using a Microsoft Lifecam NX-6000
+
+<h3> Installation for Build Hat </h3>
 
 
 <h2> Raspberry Pi deployment </h2>
