@@ -15,7 +15,7 @@ Instructions to configure and setup Build Hat:
 <p float="left">
   <img src="https://user-images.githubusercontent.com/67831664/214127230-46c83ec8-647d-4512-b5ef-9a3d6d6756e4.png" width="250" />
   <img src="https://user-images.githubusercontent.com/67831664/214128016-856327c5-c5e0-4716-88bf-d427d01f3012.png" width="450" /> 
-  <img src="(https://user-images.githubusercontent.com/67831664/214128019-d55ebf70-650f-4d1b-ade5-4bdc20774aad.png" width="400" /> 
+  <img src="https://user-images.githubusercontent.com/67831664/214128019-d55ebf70-650f-4d1b-ade5-4bdc20774aad.png" width="400" /> 
 </p>
 
 
