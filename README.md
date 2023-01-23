@@ -16,9 +16,9 @@
 The guide to train models within minutes and deploy it on Raspberry Pi and OAK-D can be found on the hackster project page. The specific instructions for converting a Tensorflow Lite Model (.tflite) available on EdgeImpulse dashboard to a (.blob) model compatible with OAK-D can be found [here](https://github.com/dhruvsheth-ai/Gelare/tree/main/models)
 
 - **[Hardware Building Instructions](https://github.com/dhruvsheth-ai/Gelare/tree/main/building-instructions)**: Contains Instructions to Build the LEGO Mindstorms Inventor Kit Robotic Arm and integrating it with Raspberry Pi and Raspberry Pi Build Hat.
-- **[Installation](https://github.com/dhruvsheth-ai/Gelare/edit/main/README.md#-installation-)**: If you have the setup ready, this guide provides you on running the model off-the-shelf using Gelāre's pretrained models
+- **[Installation](https://github.com/dhruvsheth-ai/Gelare//main/README.md#-installation)**: If you have the setup ready, this guide provides you on running the model off-the-shelf using Gelāre's pretrained models
 - **[Custom Model Training and Deployment](https://github.com/dhruvsheth-ai/Gelare/tree/main/models)**: Our hackster as well as github guide provides instructions to convert EdgeImpulse format models to run on OAK-D
-- **[Running on Raspberry Pi](https://github.com/dhruvsheth-ai/Gelare/edit/main/README.md#-raspberry-pi-deployment-)**: Instructions to run Object Detection and Speech Recognition Models on Raspberry Pi without the need of OAK-D.
+- **[Running on Raspberry Pi](https://github.com/dhruvsheth-ai/Gelare//main/README.md#-raspberry-pi-deployment)**: Instructions to run Object Detection and Speech Recognition Models on Raspberry Pi without the need of OAK-D.
 - **[Algorithms](https://github.com/dhruvsheth-ai/Gelare/tree/main/Algorithms)**: Algorithms which go behind running Gelāre.
 - **[Recording Videos](https://github.com/dhruvsheth-ai/Gelare/tree/main/Demo%20Videos)**: Demo of the LEGO Mindstorms Robot running Gelāre.  
 
