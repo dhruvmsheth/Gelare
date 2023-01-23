@@ -83,7 +83,7 @@ Spatial detection network demo.
 '''
 
 # Get argument first
-nnBlobPath = str((Path(__file__).parent / Path('/home/raspberry/depthai-python/examples/models/face-detection-retail-0004.blob')).resolve().absolute())
+nnBlobPath = str((Path(__file__).parent / Path('./models/face-detection-ei.blob')).resolve().absolute())
 if len(sys.argv) > 1:
     nnBlobPath = sys.argv[1]
 
