@@ -62,6 +62,25 @@ Setup the camera module through `sudo raspi-config`. Not required for a webcam. 
 
 <h3> Installation for Build Hat </h3>
 
+<h2> Quick Start </h2>
+
+```shell
+$ git clone https://github.com/dhruvsheth-ai/Gelare.git
+$ cd Gelare/software/
+```
+
+**Using OAK-D**
+
+- Example 1: Controlling Robotic Arm using Spatial coordinates of detected face:
+Credit: EdgeImpulse Team. Model adopted from [source](https://studio.edgeimpulse.com/public/87291/latest/deployment)
+
+To run:
+```shell
+python3 spatial_movement.py
+```
+
+- Example 2: Robot-assisted Feeding for patients with Hand Tremor. To investigate the algorithm behind the decision making process, check here <linkhere>. 
+
 
 <h2> Raspberry Pi deployment </h2>
 
