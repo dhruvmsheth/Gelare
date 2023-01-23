@@ -38,11 +38,24 @@ The examples <insert_example1>, <insert_example2> and <insert_example3> are exam
 This is the simplest approach to deploy EdgeImpulse models on Raspberry Pi and get started with LEGO Robot Inventor Kit. This doesn't require Model Conversion, nor does it require an OAK-D. Since the processing power on a Raspberry Pi is limited and since it doesn't offer depth estimation capabilites, we have limited our deployment in the Computer Vision end only to Gesture recognition as seen in <insert_example 4>. However, Gelāre offers an extremely customizable pipeline, allowing users to modify the example and integrate their custom trained model using EdgeImpulse. Additionally, we extend this to Acoustic Modality, integrating speech-controlled Assistive Robotics in <insert_example 5>
 
 <h2> Installation </h2>
+<h3> Installation for OAK-D </h3>
+```shell
+$ sudo curl -fL https://docs.luxonis.com/install_dependencies.sh | bash
+```
+
+```shell
+$ cd Gelare
+$ pip3 install -r requirements.txt
+```
+
+<h3> Installation for running EdgeImpulse on Raspberry Pi:
+  
 
 
 <h2> Raspberry Pi deployment </h2>
 
 <h2> About the Developers </h2>
-- Dhruv Sheth: Dhruv possibly knows more types of development boards than the letters of the alphabet and is skilled with TinyML and Robotic Arms. He recently represented India and won 3rd Grand Award at ISEF. More about him: https://dhruvsheth-ai.github.io/
-- Atharva Wasekar: Atharva has a lot of experience in robotics competitions (2nd place IRC League Russia and Most Innovative Solution in WRS Japan) and can code in several different languages. More about him: https://in.linkedin.com/in/atharvawasekar
+
+- **Dhruv Sheth**: Dhruv possibly knows more types of development boards than the letters of the alphabet and is skilled with TinyML and Robotic Arms. He recently represented India and won 3rd Grand Award at ISEF. More about him: https://dhruvsheth-ai.github.io/
+- **Atharva Wasekar**: Atharva has a lot of experience in robotics competitions (2nd place IRC League Russia and Most Innovative Solution in WRS Japan) and can code in several different languages. More about him: https://in.linkedin.com/in/atharvawasekar
 
