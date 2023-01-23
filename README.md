@@ -58,7 +58,7 @@ $ curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
 $ sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
 $ npm config set user root && sudo npm install edge-impulse-linux -g --unsafe-perm
 ```  
-Setup the camera module through `sudo raspi-config`. Not required for a webcame. This documentation using a Microsoft Lifecam NX-6000
+Setup the camera module through `sudo raspi-config`. Not required for a webcam. This documentation uses a Microsoft Lifecam NX-6000
 
 <h3> Installation for Build Hat </h3>
 
