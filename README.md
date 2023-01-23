@@ -21,14 +21,28 @@ The guide to train models within minutes and deploy it on Raspberry Pi and OAK-D
 - **[Running on Raspberry Pi](https://github.com/dhruvsheth-ai/Gelare/blob/main/README.md#-raspberry-pi-deployment-)**: Instructions to run Object Detection and Speech Recognition Models on Raspberry Pi without the need of OAK-D.
 - **[Algorithms](https://github.com/dhruvsheth-ai/Gelare/tree/main/Algorithms)**: Algorithms which go behind running Gelāre.
 - **[Recording Videos](https://github.com/dhruvsheth-ai/Gelare/tree/main/Demo%20Videos)**: Demo of the LEGO Mindstorms Robot running Gelāre.  
+- **[Error Documentation](https://github.com/dhruvsheth-ai/Gelare/tree/main/error-docs)**: Solutions to some obvious errors during the build process.
+
+<h2> Deployment </h2>
 
 Gelāre supports two method to deploy object detection methods for real-time object detection off-the shelf. Each method uses LEGO Mindstorms Inventor kit and Raspberry Pi Build Hat.
 
-- Using the [OAK-D (Opencv AI Kit with Depth)](https://store.opencv.ai/products/oak-d). This is the first repository to extend support for deploying EdgeImpulse trained models to OAK-D.
+- Using the [OAK-D (Opencv AI Kit with Depth)](https://store.opencv.ai/products/oak-d): 
 
+This is the first repository to extend support for deploying EdgeImpulse trained models to OAK-D. Gelāre integrates Depth estimation with object detection through EdgeImpulse's FOMO. To know more about OAK-D specifications, direct [here](https://github.com/dhruvsheth-ai/Gelare/blob/main/building-instructions/README.md#-oak-d-deployment-). 
+
+The examples <insert_example1>, <insert_example2> and <insert_example3> are examples to run object detection on OAK-D controlling the LEGO Mindstorms Robot. The face-detection model, human-assisted feeding and gesture recognition model are trained on EdgeImpulse and are converted to `(.blob)` format required for OAK-D through the conversion instructions. `(.tflite)` -> `(.onnx)` -> `(.blob)`. You can train your own models on EdgeImpulse required for the specific use-case and follow the documentation to integrate it in the pipeline. We do have plans on integrating [Pose Estimation](https://github.com/edgeimpulse/pose-estimation-processing-block) feature released recently by EdgeImpulse, however this is a future prospect.
+
+- Using Raspberry Pi and RPi Webcam:
+
+This is the simplest approach to deploy EdgeImpulse models on Raspberry Pi and get started with LEGO Robot Inventor Kit. This doesn't require Model Conversion, nor does it require an OAK-D. Since the processing power on a Raspberry Pi is limited and since it doesn't offer depth estimation capabilites, we have limited our deployment in the Computer Vision end only to Gesture recognition as seen in <insert_example 4>. However, Gelāre offers an extremely customizable pipeline, allowing users to modify the example and integrate their custom trained model using EdgeImpulse. Additionally, we extend this to Acoustic Modality, integrating speech-controlled Assistive Robotics in <insert_example 5>
 
 <h2> Installation </h2>
 
+
 <h2> Raspberry Pi deployment </h2>
 
-- (under development)
+<h2> About the Developers </h2>
+- Dhruv Sheth: Dhruv possibly knows more types of development boards than the letters of the alphabet and is skilled with TinyML and Robotic Arms. He recently represented India and won 3rd Grand Award at ISEF. More about him: https://dhruvsheth-ai.github.io/
+- Atharva Wasekar: Atharva has a lot of experience in robotics competitions (2nd place IRC League Russia and Most Innovative Solution in WRS Japan) and can code in several different languages. More about him: https://in.linkedin.com/in/atharvawasekar
+
