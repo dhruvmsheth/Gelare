@@ -21,7 +21,6 @@ motor_body_movement = Motor('D')
 motor_body_control.run_to_position(10, speed=60, direction='shortest')
 motor_gripper_control.run_to_position(125, speed=60, direction='anticlockwise')
 
-
 #motor_gripper.set_default_speed(40)
 #motor_gripper_control.set_default_speed(50)
 #motor_body_control.set_default_speed(50)
@@ -31,14 +30,6 @@ print("Position Motor Gripper Port A", motor_gripper.get_aposition())
 print("Position Motor Gripper Control Port B", motor_gripper.get_aposition())
 print("Position Motor Body Control Port C", motor_gripper.get_aposition())
 print("Position Motor Body Movement Port D", motor_gripper.get_aposition())
-
-def closeGripper():
-    motor_gripper.run_to_position(140, speed=30, direction='clockwise')
-    motor_body_movement.run_to_position(180, speed=30, direction='clockwise')
-    motor_body_movement.run_to_position(-180, speed=30, direction='anticlockwise')
-    
-def openGripper():
-    motor_gripper.run_to_position(13, speed=30, direction='anticlockwise')
 
 
 def bodyMovement(x, y, z):
@@ -225,8 +216,6 @@ with dai.Device(pipeline) as device:
 
             if labelMap[detection.label] == "face":
                 bodyMovement((x1+x2)/2, (y1+y2)/2, zin)
-                print(zin)
-
 
             try:
                 label = labelMap[detection.label]
