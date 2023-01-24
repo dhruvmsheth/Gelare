@@ -27,13 +27,13 @@ The guide to train models within minutes and deploy it on Raspberry Pi and OAK-D
 
 Gelāre supports two method to deploy object detection methods for real-time object detection off-the shelf. Each method uses LEGO Mindstorms Inventor kit and Raspberry Pi Build Hat.
 
-- Using the [OAK-D (Opencv AI Kit with Depth)](https://store.opencv.ai/products/oak-d): 
+**Using the [OAK-D (Opencv AI Kit with Depth)](https://store.opencv.ai/products/oak-d):** 
 
 This is the first repository to extend support for deploying EdgeImpulse trained models to OAK-D. Gelāre integrates Depth estimation with object detection through EdgeImpulse's FOMO. To know more about OAK-D specifications, direct [here](https://github.com/dhruvsheth-ai/Gelare/blob/main/building-instructions/README.md#-oak-d-deployment-). 
 
 The examples <insert_example1>, <insert_example2> and <insert_example3> are examples to run object detection on OAK-D controlling the LEGO Mindstorms Robot. The face-detection model, human-assisted feeding and gesture recognition model are trained on EdgeImpulse and are converted to `(.blob)` format required for OAK-D through the conversion instructions. `(.tflite)` -> `(.onnx)` -> `(.blob)`. You can train your own models on EdgeImpulse required for the specific use-case and follow the documentation to integrate it in the pipeline. We do have plans on integrating [Pose Estimation](https://github.com/edgeimpulse/pose-estimation-processing-block) feature released recently by EdgeImpulse, however this is a future prospect.
 
-- Using Raspberry Pi and RPi Webcam:
+**Using Raspberry Pi and RPi Webcam:**
 
 This is the simplest approach to deploy EdgeImpulse models on Raspberry Pi and get started with LEGO Robot Inventor Kit. This doesn't require Model Conversion, nor does it require an OAK-D. Since the processing power on a Raspberry Pi is limited and since it doesn't offer depth estimation capabilites, we have limited our deployment in the Computer Vision end only to Gesture recognition as seen in <insert_example 4>. However, Gelāre offers an extremely customizable pipeline, allowing users to modify the example and integrate their custom trained model using EdgeImpulse. Additionally, we extend this to Acoustic Modality, integrating speech-controlled Assistive Robotics in <insert_example 5>
 
