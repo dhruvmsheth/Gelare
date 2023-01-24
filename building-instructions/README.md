@@ -2,10 +2,7 @@
 
 This repository contains information for running Gelāre on LEGO Mindstorms Robot Inventor Kit 51515. We haven't tested our software for LEGO EV3 yet. If you do find a method to convert LEGO EV3 pin to an LPF2 pin, this system might be usable with little or no modifications on EV3 as well. The Hardware build process for Robot inventor kit is listed [here](https://github.com/dhruvsheth-ai/Gelare/blob/main/building-instructions/InventorInstructions.md) and for EV3, is listed [here](https://github.com/dhruvsheth-ai/Gelare/blob/main/building-instructions/ev3Instructions.md)
 
-<p float="center">
-  <img src="https://user-images.githubusercontent.com/67831664/214117797-92c30701-a97f-46bf-93a7-9d1451e2542c.jpg" width="300" />
-</p>
-
+![labelled3](https://user-images.githubusercontent.com/67831664/214233708-ddecf535-1d2a-4f96-b563-b97590760c38.png)
 
 <h2> LEGO Inventor Kit Setup </h2>
 Instructions to setup LEGO Robot Inventor Kit can be found [here]()
