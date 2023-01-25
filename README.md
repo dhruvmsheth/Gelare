@@ -73,7 +73,8 @@ $ cd Gelare/software/
 
 <h4> Example 1: Controlling Robotic Arm using Spatial coordinates of detected face: </h4>
 
-Credit: EdgeImpulse Team. Model adopted from [source](https://studio.edgeimpulse.com/public/87291/latest/deployment)
+Credit: EdgeImpulse Team. Model adopted from [source](https://studio.edgeimpulse.com/public/87291/latest/deployment).
+
 This is a feedback loop mechanism which tracks the `X, Y, Z` coordinates of the user's input face and controls the movement of the Robotic Arm accordingly. This example employs a Face Detection Model trained on EdgeImpulse FOMO which accurately tracks input frames with low (almost negligible) false positives. The code structure takes in a case by case input of variance in X, Y or Z based on the input order and accordingly moves the Robotic Arm by the exact same radians moved by the user's input face.
 
 
@@ -82,8 +83,8 @@ To run:
 python3 spatial_movement.py
 ```
 
-Converted `(.blob)` file: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse-converted.blob
-Original `(.tflite)` model: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse.tflite
+- Converted `(.blob)` file: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse-converted.blob
+- Original `(.tflite)` model: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse.tflite
 
 Control Logic:
 
@@ -138,9 +139,10 @@ The above code initiates the movement of the body_movement motor based on lower 
 </details>
 
 
+  
 <h4> Example 2: Robot-assisted Feeding for patients with Hand Tremor. </h4>
   
-To investigate the algorithm behind the decision making process, check [here](https://github.com/dhruvsheth-ai/Gelare/tree/main/Algorithms)
+To investigate the algorithm behind the decision making process, check [here](https://github.com/dhruvsheth-ai/Gelare/tree/main/Algorithms). There exist *multiple better algorithms* for robot-assisted feeding either using state-of-the-art software of hardware. The purpose of this system is not to introduce a Novel algorithm, rather to bring the ability to custom deploy low-cost, low-resource, quick solutions on affordable hardware for efficient prototyping before actual implementation. This approach can be used as a prototyping approach to design and experiment with computer vision models on resource-constrained devices which are portable.
 
 
 <h2> Raspberry Pi deployment </h2>
