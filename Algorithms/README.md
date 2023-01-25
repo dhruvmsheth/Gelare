@@ -11,3 +11,4 @@ Given below is the algorithm to calculate the angle required to be turned by the
 
 The next step is to calculate the angle required to be taken in the `Z` direction by the Robotic Arm to exert only the required amount of pressure on the Fruit.
 
+![z-depth-lego](https://user-images.githubusercontent.com/67831664/214655945-2a006ef2-8fee-4d30-b48c-dd76831d3130.png)
