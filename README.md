@@ -69,9 +69,9 @@ $ git clone https://github.com/dhruvsheth-ai/Gelare.git
 $ cd Gelare/software/
 ```
 
-<h4> Using OAK-D </h4>
+<h3> Using OAK-D </h4>
 
-**Example 1: Controlling Robotic Arm using Spatial coordinates of detected face:**
+<h4> Example 1: Controlling Robotic Arm using Spatial coordinates of detected face: </h4>
 
 Credit: EdgeImpulse Team. Model adopted from [source](https://studio.edgeimpulse.com/public/87291/latest/deployment)
 This is a feedback loop mechanism which tracks the `X, Y, Z` coordinates of the user's input face and controls the movement of the Robotic Arm accordingly. This example employs a Face Detection Model trained on EdgeImpulse FOMO which accurately tracks input frames with low (almost negligible) false positives. The code structure takes in a case by case input of variance in X, Y or Z based on the input order and accordingly moves the Robotic Arm by the exact same radians moved by the user's input face.
@@ -86,6 +86,10 @@ Converted `(.blob)` file: https://github.com/dhruvsheth-ai/Gelare/blob/main/mode
 Original `(.tflite)` model: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse.tflite
 
 Control Logic:
+
+<details>
+  <summary> Motor Control Logic (<i>click to expand</i>)</summary>
+  <!-- have to be followed by an empty line! -->
 
 ```python
 
@@ -129,8 +133,14 @@ def bodyMovement(x, y, z):
 ```        
 
 The above code initiates the movement of the body_movement motor based on lower and upper `X` threshold, upper and lower movement through body_control motor based on lower and upper `Y` threshold and forward and backward movement based on Depth `Z` threshold (in centimetre).
+  
 
-- Example 2: Robot-assisted Feeding for patients with Hand Tremor. To investigate the algorithm behind the decision making process, check here <linkhere>. 
+</details>
+
+
+<h4> Example 2: Robot-assisted Feeding for patients with Hand Tremor. </h4>
+  
+To investigate the algorithm behind the decision making process, check [here](https://github.com/dhruvsheth-ai/Gelare/tree/main/Algorithms)
 
 
 <h2> Raspberry Pi deployment </h2>
