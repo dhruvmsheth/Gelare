@@ -11,7 +11,7 @@ Once done, follow the next set of instructions:
 
 Run the following commands on Docker. You do not need to install any packages other than Docker. It consumes about 26.7GB of host storage.
 
-```
+```shell
 $ docker pull ghcr.io/pinto0309/tflite2tensorflow:latest
 
 $ docker run -it --rm \
@@ -21,7 +21,7 @@ $ docker run -it --rm \
 
 Next:
 
-```
+```shell
 tflite2tensorflow \
 --model_path /path/to/your/trained.tflite \
 --flatc_path ../flatc \
@@ -34,3 +34,9 @@ tflite2tensorflow \
 
 That's it! It generates a `(.blob)` file in one of the zip files in your folder. Replace that `(.blob)` file with the default `(.blob)` model in the python script to use a custom EdgeImpulse FOMO trained model for object detection.
 
+The pretrained models that are currently available in the repository are:
+- Face Detection Model (both .blob and .tflite) 
+- Gesture Recognition Model (.blob, .tflite and .eim)
+- Fruit Top-Down detection Model (.blob and .tflite)
+
+We plan to support a (.eim) model python script for running Face detection on Raspberry Pi in the future but currently due to low frame rate, we are limiting it solely to Gesture Recognition. 
