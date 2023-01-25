@@ -69,15 +69,66 @@ $ git clone https://github.com/dhruvsheth-ai/Gelare.git
 $ cd Gelare/software/
 ```
 
-**Using OAK-D**
+<h4> Using OAK-D </h4>
 
-- Example 1: Controlling Robotic Arm using Spatial coordinates of detected face:
+**Example 1: Controlling Robotic Arm using Spatial coordinates of detected face:**
+
 Credit: EdgeImpulse Team. Model adopted from [source](https://studio.edgeimpulse.com/public/87291/latest/deployment)
+This is a feedback loop mechanism which tracks the `X, Y, Z` coordinates of the user's input face and controls the movement of the Robotic Arm accordingly. This example employs a Face Detection Model trained on EdgeImpulse FOMO which accurately tracks input frames with low (almost negligible) false positives. The code structure takes in a case by case input of variance in X, Y or Z based on the input order and accordingly moves the Robotic Arm by the exact same radians moved by the user's input face.
+
 
 To run:
 ```shell
 python3 spatial_movement.py
 ```
+
+Converted `(.blob)` file: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse-converted.blob
+Original `(.tflite)` model: https://github.com/dhruvsheth-ai/Gelare/blob/main/models/face-detection-edgeimpulse.tflite
+
+Control Logic:
+
+```python
+
+def bodyMovement(x, y, z):
+    if x<((150)-85):
+        #move left
+        #motor_body_movement.run_for_degrees(20, speed=50)
+        motor_body_movement.start(30)
+        print("left")
+    elif x>((150)+85):
+        #move right
+        #motor_body_movement.run_for_degrees(20, speed=-50)
+        motor_body_movement.start(-30)
+        print("right")
+    elif y<((150)-85):
+        #move left
+        motor_body_control.start(-50)
+        print("up")
+        print("Position Motor Body Control Port C", motor_gripper.get_aposition())
+    elif y>((150)+85):
+        #move right
+        motor_body_control.start(30)
+        print("down")
+        print("Position Motor Body Control Port C", motor_gripper.get_aposition())
+    elif z<(500):
+        #move left
+        motor_gripper_control.start(50)
+        print("ahead")
+        print("Position Motor Gripper Control Port B", motor_gripper.get_aposition())
+    elif z>(800):
+        #move right
+        motor_gripper_control.start(-50)
+        print("behind")
+        print("Position Motor Gripper Control Port B", motor_gripper.get_aposition())
+    else:
+        #stop motors
+        motor_body_movement.stop()
+        motor_body_control.stop()
+        motor_gripper_control.stop()
+        print("no movement")
+```        
+
+The above code initiates the movement of the body_movement motor based on lower and upper `X` threshold, upper and lower movement through body_control motor based on lower and upper `Y` threshold and forward and backward movement based on Depth `Z` threshold (in centimetre).
 
 - Example 2: Robot-assisted Feeding for patients with Hand Tremor. To investigate the algorithm behind the decision making process, check here <linkhere>. 
 
