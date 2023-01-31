@@ -33,6 +33,7 @@ print("avg ", sum_of_angle_differences / len(angs))
 ```
 
 This is how the code output looks:
+<br>
 ![Code output](https://user-images.githubusercontent.com/45729391/215796317-4d2e4562-81d3-41d9-9690-a899bf3aecbd.jpeg)
 
 Running the Robot Arm Error Calculation code:
