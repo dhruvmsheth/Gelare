@@ -149,7 +149,7 @@ if (sys.platform == 'linux' and not os.environ.get('DISPLAY')):
 def help():
     print('python classify.py <path_to_model.eim> <Camera port ID, only required when more than 1 camera is present>')
 
-def main(argv):
+def main(argv):    
     incCounteri = 0
     incCounterp = 0
     incCountert = 0
@@ -180,22 +180,32 @@ def main(argv):
             model_info = runner.init()
             print('Loaded runner for "' + model_info['project']['owner'] + ' / ' + model_info['project']['name'] + '"')
             labels = model_info['model_parameters']['labels']
+
             sec = 0
             start_time = time.time()
 
             with dai.Device(pipeline) as device:
+                # Start pipeline
+                device.startPipeline()
                 # Output queue will be used to get the depth frames from the outputs defined above
                 depthQueue = device.getOutputQueue(name="depth")
                 dispQ = device.getOutputQueue(name="disp")
 
+                text = TextHelper()
                 hostSpatials = HostSpatialsCalc(device)
                 y = 200
                 x = 300
                 step = 3
                 delta = 5
                 hostSpatials.setDeltaRoi(delta)
+                
+
+                # Output queue will be used to get the rgb frames from the output defined above
+                q_rgb = device.getOutputQueue(name="rgb", maxSize=4, blocking=False)
 
                 while True:
+                    in_rgb = q_rgb.get()  # blocking call, will wait until a new data has arrived
+                    src = in_rgb.getCvFrame()
                     depthFrame = depthQueue.get().getFrame()
                     # Calculate spatial coordiantes from depth frame
                     spatials, centroid = hostSpatials.calc_spatials(depthFrame, (x,y)) # centroid == x/y in our case
@@ -205,7 +215,7 @@ def main(argv):
                     disp = (disp * (255 / stereo.initialConfig.getMaxDisparity())).astype(np.uint8)
                     disp = cv2.applyColorMap(disp, cv2.COLORMAP_JET)                    
 
-                    img = disp
+                    img = src
 
                     if img is not None:
                         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -219,6 +229,7 @@ def main(argv):
                         # so you can see what's being passed into the classifier
 
                         res = runner.classify(features)
+                # print('classification runner response', res)
 
                 # print('classification runner response', res)
 
