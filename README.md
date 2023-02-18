@@ -23,6 +23,8 @@ The guide to train models within minutes and deploy it on Raspberry Pi and OAK-D
 - **[Recording Videos](https://github.com/dhruvsheth-ai/Gelare/tree/main/Demo%20Videos)**: Demo of the LEGO Mindstorms Robot running Gelāre.  
 - **[Error Documentation](https://github.com/dhruvsheth-ai/Gelare/tree/main/error-docs)**: Solutions to some obvious errors during the build process.
 
+The README is still being updated. All code is available in the 'software' folder.
+
 <h2> Deployment </h2>
 
 Gelāre supports two method to deploy object detection methods for real-time object detection off-the shelf. Each method uses LEGO Mindstorms Inventor kit and Raspberry Pi Build Hat.
